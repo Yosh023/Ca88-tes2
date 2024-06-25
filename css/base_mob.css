@@ -1,0 +1,410 @@
+/*--------------------
+  For Activity use: v20210608
+--------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%; }
+
+* {
+  font-family: Arial, 'Microsoft YaHei', "Microsoft JhengHei", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+body canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body>.container {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.space5 {
+  height: 5px;
+}
+.space10 {
+  height: 10px;
+}
+.space15 {
+  height: 15px;
+}
+.space20 {
+  height: 10px;
+}
+.space30 {
+  height: 30px;
+}
+.space50 {
+  height: 50px;
+}
+.btn {
+  cursor: pointer;
+}
+.btn:active {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+/*-------------------- Mobile Login & Logout  --------------------*/
+.login .logout-btn {
+    font-size: 1em;
+    height: auto;
+    right: -70px;
+    line-height: 1em;
+    padding: 0.5em 1em;
+    text-align: right;
+    cursor: pointer;
+    border: 0;
+    background-color: #b26f28;
+    color: #ffffff !important;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: -webkit-linear-gradient(90deg, #dc8043 0%, #f2d54a 100%);
+    background-image: -moz-linear-gradient(270deg, #dc8043 0%, #f2d54a 100%);
+    background-image: linear-gradient(0deg, #dc8043 0%, #f2d54a 100%);
+    border-radius: 50px;
+    text-decoration: none;
+}
+.login .logout-btn:active,
+.login .logout-btn:focus {
+    transition: all 300ms;
+    cursor: pointer;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    outline: none;
+}
+.login .logout {
+    position: absolute;
+    left: 0;
+    right: -50%;
+    top: 10px;
+    margin: auto;
+}
+.login .loggedUser {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color:#fff;
+    margin-right: 4px;
+    text-shadow: 1px 1px 2px #043327;
+    font-size: 1em;
+    height: auto;
+    line-height: 1em;
+}
+
+/*-------------------- Header  --------------------*/
+.nav {
+  position: relative;
+  z-index: 5;
+}
+.nav .home{
+  width: 14%;
+  padding-bottom: 14%;
+  position: absolute;
+  left: 23px;
+  top: 5px;
+  display: block;
+  cursor: pointer;
+  background-position: center 0;
+  background-size: 100% auto;
+  background-image: url(../imgs/img_icons.png);
+}
+.nav .home:active {
+  transition: all 300ms;
+  cursor: pointer;
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.header {
+  padding-top: 30px;
+  max-width: 560px;
+  margin: auto;
+}
+.event-title {
+  position: relative;
+  width: 100%;
+  -webkit-animation: slide-in-top 0.5s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.5s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  z-index: 1;
+}
+.event-title-img {
+  width: 100%;
+}
+.event-date {
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 94%;
+  margin: auto;
+  /*background-color: #f4e9dc;*/
+  color: #fff;
+  /*border-radius: 30px;*/
+  padding: 0;
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px 20px;
+  /*border-bottom: 5px solid #c7b9a7;*/
+}
+
+
+/*-------------------- Content  --------------------*/
+/*基本伸縮背景*/
+.base-bg-extend-box {
+  position: relative;
+}
+
+.base-bg-extend-top{
+  display: block;
+  width: 100%;
+  line-height: 0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 43px;
+}
+.base-bg-extend-bottom {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.base-bg-extend-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 6% 0;
+  z-index: 1;
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+.base-bg-extend-content {
+  position: relative;
+  z-index: 4;
+  padding: 8% 10%;
+}
+
+
+ol.rule {
+  color: #ffffff;
+  text-align: left;
+  list-style-type: decimal;
+  margin: 0 0 0 1.3rem;
+  font-size: 14px;
+}
+ol.rule li {
+  margin-bottom: 10px;
+}
+.rule-link {
+  text-align: left;
+  padding-right: 15px;
+  margin: 40px 0 0 20px;
+}
+.rule-link a {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.hr {
+  display: block;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  margin: 0.7em 0;
+}
+
+
+/*-------------------- Footer  --------------------*/
+.footer {
+  color: rgba(251, 246, 255);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*-------------------- Popup  --------------------*/
+.popup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 20;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+/*使視窗置中*/
+.popup:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.05em;
+}
+.popup-content {
+  max-width: 90%;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  margin: 30px auto;
+  width: 560px;
+  position: relative;
+  color:#fff;
+}
+.pop-close {
+  background-image: url(../imgs/img_icons.png);
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 15%;
+  padding-bottom: 15%;
+  display: block;
+  position: absolute;
+  left: -5%;
+  top: -3%;
+  z-index: 5;
+  cursor: pointer;
+}
+.pop-close:active {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+
+/*------------- ca loading --------------*/
+.preloader {
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #110e09;
+}
+.preloader .preloader-inner {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.preloader .spinner-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.preloader .spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #897958;
+  border-top-color: #ffebc8;
+  border-radius: 50%;
+  animation: loader-rotate 1s linear infinite;
+  margin: auto;
+  box-shadow: 0 0 200px rgb(228 202 157 / 50%);
+}
+.preloader .preloader-text {
+  color:  #e3c899;
+  margin: auto;
+  text-align: center;
+  padding: 0 10%;
+}
+.preloader img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60%;
+}
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); }
+}
